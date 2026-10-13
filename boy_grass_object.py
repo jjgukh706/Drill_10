@@ -48,7 +48,7 @@ class Zombie:
 
 # Game object class here
 
-class Zombie:
+class Ball:
     def __init__(self):
         self.x, self.y = random.randint(100, 700 ), 599
         self.speed = random.randint(5, 10)
