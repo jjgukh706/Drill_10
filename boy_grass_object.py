@@ -49,6 +49,31 @@ class Zombie:
 # Game object class here
 
 
+class Ball:
+    def __init__(self):
+        self.x, self.y = random.randint(100, 700 ), 599
+        self.speed = random.randint(5, 10)
+        self.bimg = random.randint(0,1)
+        if self.bimg:
+            self.image = load_image('ball41x41.png')
+        else:
+            self.image = load_image('ball21x21.png')
+
+            
+
+        
+
+
+    def update(self):
+        if self.y > 30 :
+            self.y -= self.speed
+
+
+
+        
+
+    def draw(self):
+        self.image.draw(self.x, self.y)
 
 
 
@@ -69,7 +94,7 @@ grass = None
 team = None
 zombie = None
 world = None
-
+balls = None
 
 
 
@@ -91,6 +116,9 @@ def reset_world():
 
     zombie = Zombie()
     world.append(zombie)
+
+    balls = [Ball() for i in range(20)]
+    world += balls
 
 
 def update_world():
