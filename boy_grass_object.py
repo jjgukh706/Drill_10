@@ -62,10 +62,12 @@ class Zombie:
 
 
     def update(self):
-        pass
+        if self.y > 30 :
+            self.y -= self.speed
+
 
     def draw(self):
-        pass
+        self.image.draw(self.x, self.y)
 
 
 
