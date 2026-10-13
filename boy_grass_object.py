@@ -64,7 +64,9 @@ class Ball:
     def update(self):
         if self.y > 30 :
             self.y -= self.speed
-
+        else:
+            self.y = 30
+            
 
     def draw(self):
         self.image.draw(self.x, self.y)
